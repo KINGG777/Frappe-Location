@@ -90,6 +90,10 @@ docker cp helpdesk/api/contact.py                                    frappe-help
 #     template flag (that flag only affects the creation form) ---
 docker cp desk/src/components/ticket/TicketCustomerSidebar.vue    frappe-helpdesk-16-backend-1:/home/frappe/frappe-bench/apps/helpdesk/desk/src/components/ticket/TicketCustomerSidebar.vue
 
+# --- Generic list-view fix: makes the Locations list (and any other
+#     custom doctype list) load without crashing ---
+docker cp helpdesk/api/doc.py                                       frappe-helpdesk-16-backend-1:/home/frappe/frappe-bench/apps/helpdesk/helpdesk/api/doc.py
+
 # --- Rebuild frontend assets ---
 docker exec frappe-helpdesk-16-backend-1 bash -c "cd /home/frappe/frappe-bench && bench build --app helpdesk"
 
