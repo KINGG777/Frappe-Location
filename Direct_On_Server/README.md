@@ -347,6 +347,8 @@ Expected structure:
     │       │   ├── contact/
     │       │   │   ├── EditContactDialog.vue
     │       │   │   └── NewContactDialog.vue
+    │       │   ├── customer/
+    │       │   │   └── InviteContactDialog.vue
     │       │   ├── layouts/
     │       │   │   └── layoutSettings.ts
     │       │   ├── location/
@@ -385,7 +387,7 @@ Before modifying Helpdesk source files:
 
 ## 17. Copy All Location Customization Files
 
-All customization files, including `InviteContactDialog.vue`, can be copied together:
+All customization files:
 
     cd /var/www/Frappe-Location
 
@@ -415,11 +417,7 @@ All customization files, including `InviteContactDialog.vue`, can be copied toge
 
     cp helpdesk/api/doc.py /var/www/Frappe/apps/helpdesk/helpdesk/api/doc.py
 
-    cd /var/www/Frappe/apps/helpdesk/desk/src/components/customer
-
-    cp InviteContactDialog.vue InviteContactDialog.vue.bk
-
-    sudo vi InviteContactDialog.vue
+    cp desk/src/components/customer/InviteContactDialog.vue /var/www/Frappe/apps/helpdesk/desk/src/components/customer/
 
 ---
 
